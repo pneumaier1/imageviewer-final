@@ -6,7 +6,7 @@ import java.awt.Color;
  * @version (a version number or a date)
  */
 
-public class RedTint extends Filter
+public class GreenTint extends Filter
 {
     // instance variables - replace the example below with your own
 
@@ -14,7 +14,7 @@ public class RedTint extends Filter
     /**
      * Constructor for objects of class RedTint
      */
-    public RedTint(String name)
+    public GreenTint(String name)
     {
         super(name);
        
@@ -32,7 +32,7 @@ public class RedTint extends Filter
                 
                 int blue = pix.getBlue();
                 
-                image.setPixel(x, y, new Color(red, green/2, blue/2));
+                image.setPixel(x, y, new Color(red/2, green, blue/2));
             }
         }  
     }
