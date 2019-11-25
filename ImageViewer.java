@@ -151,7 +151,10 @@ public class ImageViewer
         if(currentImage != null) {
             // create new image with double size
             int width = currentImage.getWidth();
+            
             int height = currentImage.getHeight();
+            
+            
             OFImage newImage = new OFImage(width * 2, height * 2);
 
             // copy pixel data into new image
@@ -175,7 +178,7 @@ public class ImageViewer
     /**
      * Make the current picture smaller.
      */
-    private void makeSmaller()
+    public void makeSmaller()
     {
         if(currentImage != null) {
             // create new image with double size
@@ -261,6 +264,7 @@ public class ImageViewer
         filterList.add(new BlueChannel("Blue Channel"));
         filterList.add(new RedChannel("Red Channel"));
         filterList.add(new GreenChannel("Green Channel"));
+        filterList.add(new Warhol("Warhol"));
         
         return filterList;
     }
